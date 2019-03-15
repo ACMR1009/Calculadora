@@ -2,6 +2,7 @@ package com.example.calculadora;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -38,11 +39,150 @@ public class MainActivity extends AppCompatActivity {
     double seno;
     double coseno;
 
+    String initialInput;
+    String input;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         inicializa();
+        initialInput = "";
+
+        nine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input = "9";
+                initialInput = initialInput + input;
+                result.setText(initialInput);
+            }
+        });
+
+        eight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input = "8";
+                initialInput = initialInput + input;
+                result.setText(initialInput);
+            }
+        });
+
+        seven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input = "7";
+                initialInput = initialInput + input;
+                result.setText(initialInput);
+            }
+        });
+
+        six.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input = "6";
+                initialInput = initialInput + input;
+                result.setText(initialInput);
+            }
+        });
+
+        five.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input = "5";
+                initialInput = initialInput + input;
+                result.setText(initialInput);
+            }
+        });
+
+        four.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input = "4";
+                initialInput = initialInput + input;
+                result.setText(initialInput);
+            }
+        });
+
+        three.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input = "3";
+                initialInput = initialInput + input;
+                result.setText(initialInput);
+            }
+        });
+
+        two.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input = "2";
+                initialInput = initialInput + input;
+                result.setText(initialInput);
+            }
+        });
+
+        one.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input = "1";
+                initialInput = initialInput + input;
+                result.setText(initialInput);
+            }
+        });
+
+        zero.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input = "0";
+                initialInput = initialInput + input;
+                result.setText(initialInput);
+            }
+        });
+
+        point.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input = ".";
+                initialInput = initialInput + input;
+                result.setText(initialInput);
+            }
+        });
+
+        divide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input = "/";
+                initialInput = initialInput + input;
+                result.setText(initialInput);
+            }
+        });
+
+        multiplication.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input = "*";
+                initialInput = initialInput + input;
+                result.setText(initialInput);
+            }
+        });
+
+        sum.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input = "+";
+                initialInput = initialInput + input;
+                result.setText(initialInput);
+            }
+        });
+
+        subtract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input = "-";
+                initialInput = initialInput + input;
+                result.setText(initialInput);
+            }
+        });
     }
 
     private void inicializa(){
@@ -68,6 +208,8 @@ public class MainActivity extends AppCompatActivity {
         power = findViewById(R.id.button44);
         result = (TextView) findViewById(R.id.textView2);
     }
+
+
 
     private void sumar(double x, double y){
         suma = x + y;
