@@ -3,6 +3,7 @@ package com.example.calculadora;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,12 +28,15 @@ public class MainActivity extends AppCompatActivity {
     Button cosine;
     Button allClear;
 
+    TextView result;
+
     double suma;
     double resta;
     double multiplicacion;
     double division;
-    double potencia;
+    int potencia;
     double seno;
+    double coseno;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,30 +66,31 @@ public class MainActivity extends AppCompatActivity {
         sine = findViewById(R.id.button42);
         cosine = findViewById(R.id.button43);
         power = findViewById(R.id.button44);
+        result = (TextView) findViewById(R.id.textView2);
     }
 
-    private void sumar(int x, int y){
+    private void sumar(double x, double y){
         suma = x + y;
         String sumaString;
-        sumaString = Integer.toString(suma);
+        sumaString = Double.toString(suma);
     }
 
-    private void restar(int x, int y){
+    private void restar(double x, double y){
         resta = x - y;
         String restaString;
-        restaString = Integer.toString(resta);
+        restaString = Double.toString(resta);
     }
 
-    private void multiplicar(int x, int y){
+    private void multiplicar(double x, double y){
         multiplicacion = x * y;
         String multiplicacionString;
-        multiplicacionString = Integer.toString(multiplicacion);
+        multiplicacionString = Double.toString(multiplicacion);
     }
 
-    private void dividir(int x, int y){
+    private void dividir(double x, double y){
         division = x / y;
         String divisionString;
-        divisionString = Integer.toString(division);
+        divisionString = Double.toString(division);
     }
 
     private void potenciar(int x, int y){
@@ -94,7 +99,12 @@ public class MainActivity extends AppCompatActivity {
         potenciaString = Integer.toString(potencia);
     }
 
-    private void sinCalcular(int x){
-        seno =
-    }
+    //private void sinCalcular(double x){
+
+    //}
+
+    //private void cosCalcular(double x){
+
+    //}
+
 }
